@@ -1,3 +1,14 @@
+# Execution guide
+To execute the server:
+1. Go to the folder where `main.go` is and execute **go run .\main.go**
+To execute the test after the server is executed:
+1. Go to the `stressTest` folder and execute in a new terminal the command **go run .\stressTest.go**.
+2. The test can take several minutes since it will execute about $45 \times 10^4$ requests.
+3. To modify the amount of querys executed:
+    1. Go to `stressTest` folder. 
+    2. Edit the file in `stressTest.go` 
+    3. Modify the line 13 `var groupAmount = 150000` it will execute 3 times the value of this 
+    variable queries.
 # Car Pooling Service Challenge
 
 Design/implement a system to manage car pooling.
@@ -297,11 +308,11 @@ collection in constant time.
 
 * Since here is mentioned that the service should work with 100k cars and groups
 a performance test has been created, if you execute stressTest.go it will create 
-a request that will add $$10^5$$ cars throught the `PUT /cars` method. 
+a request that will add $10^5$ cars throught the `PUT /cars` method. 
 After that it will execute:
-    1. $15 \times `10^4`$ `POST /journey` requests 
-    2. $15 \times `10^4`$ `POST /locate` requests(for random groups ID)
-    3. $15 \times `10^4`$ `POST /dropoff` requests(it should delete all groups)
+    1. $15 \times 10^4$ `POST /journey` requests 
+    2. $15 \times 10^4$ `POST /locate` requests(for random groups ID)
+    3. $15 \times 10^4$ `POST /dropoff` requests(it should delete all groups)
     added for the test
 * Next you can see the results of one of the executions of the test:
 ![image](./test_times.jpg)
