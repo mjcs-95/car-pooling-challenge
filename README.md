@@ -1,6 +1,7 @@
 # Execution guide
 To execute the server:
 1. Go to the folder where `main.go` is and execute **go run .\main.go**
+
 To execute the test after the server is executed:
 1. Go to the `stressTest` folder and execute in a new terminal the command **go run .\stressTest.go**.
 2. The test can take several minutes since it will execute about $45 \times 10^4$ requests.
